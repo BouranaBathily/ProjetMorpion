@@ -9,7 +9,7 @@ public class Player {
 	     Board b=new Board();
 	     Scanner sc=new Scanner(System.in);
 	     b.displayBoard();
-	     System.out.println("Select turn:\n1. Computer (X) / 2 User (0) :");
+	     System.out.println("Qui joue en premier:\n1. Computer (X) / 2 User (0) :");
 	     int choice=sc.nextInt();
 	     if(choice==Board.PLAYER_X) {
 	    	 Point p = new Point(RANDOM.nextInt(3),RANDOM.nextInt(3));
@@ -20,7 +20,7 @@ public class Player {
 	    	 boolean moveOK=true;
 	    	 do {
 	    		 if(!moveOK) {
-	    			 System.out.println("Cell already filled");
+	    			 System.out.println("Cellule déjà remplie");
 	    		 }
 	    		 b.takeHumanInput();
 	    		 
@@ -36,10 +36,10 @@ public class Player {
 	     
 	     }
 	     if(b.hasPlayerWon(Board.PLAYER_X))
-	    	 System.out.println("You lost");
+	    	 System.out.println("Perdu");
 	     else if (b.hasPlayerWon(Board.PLAYER_0))
-	    	 System.out.println("You win!!");
+	    	 System.out.println("Gagné!!");
 	     else
-	    	 System.out.println("Draw!!!");
+	    	 System.out.println("Egalite!!!");
 }
 }
