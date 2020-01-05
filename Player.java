@@ -30,7 +30,7 @@ public class Player {
 	    	if(b.isGameOver())
 	    		break;
 	    	b.minimax(0, Board.PLAYER_X);
-	    	System.out.println("Choix position ordi: "+b.computersMove);
+	    	System.out.println("Choix position ordinateur: "+b.computersMove);
 	    	b.placeAMove(b.computersMove, Board.PLAYER_X);
 	    	b.displayBoard();
 	     
