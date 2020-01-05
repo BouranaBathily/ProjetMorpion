@@ -40,6 +40,6 @@ public class Player {
 	     else if (b.hasPlayerWon(Board.PLAYER_0))
 	    	 System.out.println("Gagné!!");
 	     else
-	    	 System.out.println("Egalite!!!");
+	    	 System.out.println("Match nul!!!");
 }
 }
