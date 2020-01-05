@@ -13,8 +13,6 @@ class Board {
     Scanner scan = new Scanner(System.in);
     int[][] board = new int[VALIDACTIONCOUNT][VALIDACTIONCOUNT];
 
-  
-
     public boolean isGameOver() {
         return (hasPlayerWon(PLAYER_X) || hasPlayerWon(PLAYER_0) || getAvailableStates().isEmpty());
     }
@@ -46,7 +44,7 @@ class Board {
     }
 
     public boolean placeAMove(Point point, int player) {
-       if ( board[point.x][point.y] != NO_PLAYER)//player = 1 for X, 2 for O
+       if ( board[point.x][point.y] != NO_PLAYER)
     	   	return false;
        
        board[point.x][point.y] = player;
