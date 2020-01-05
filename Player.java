@@ -9,7 +9,7 @@ public class Player {
 	     Board b=new Board();
 	     Scanner sc=new Scanner(System.in);
 	     b.displayBoard();
-	     System.out.println("Qui joue en premier:\n1. Computer (X) / 2 User (0) :");
+	     System.out.println("Qui joue en premier:\n1. Ordinateur (X) / 2 User (0) :");
 	     int choice=sc.nextInt();
 	     if(choice==Board.PLAYER_X) {
 	    	 Point p = new Point(RANDOM.nextInt(3),RANDOM.nextInt(3));
@@ -30,7 +30,7 @@ public class Player {
 	    	if(b.isGameOver())
 	    		break;
 	    	b.minimax(0, Board.PLAYER_X);
-	    	System.out.println("Computer choose position : "+b.computersMove);
+	    	System.out.println("Choix position ordi: "+b.computersMove);
 	    	b.placeAMove(b.computersMove, Board.PLAYER_X);
 	    	b.displayBoard();
 	     
