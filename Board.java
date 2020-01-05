@@ -111,8 +111,6 @@ class Board {
                 int currentScore = minimax(depth + 1, PLAYER_0);
                 max = Math.max(currentScore, max);
 
-                if(depth == 0)
-                	System.out.println("Score for position "+point+" = "+currentScore);
                 if(currentScore >= 0)
                 {
                 	if(depth == 0) 
